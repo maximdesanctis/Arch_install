@@ -77,5 +77,6 @@ echo "--------------------------------------"
 echo "--          Network Setup           --"
 echo "--------------------------------------"
 pacstrap /mnt networkmanager wpa_supplicant wireless_tools --noconfirm --needed
+pacstrap /mnt git --noconfirm --needed
 
 arch-chroot /mnt
