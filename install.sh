@@ -70,14 +70,14 @@ arch-chroot /mnt
 echo "--------------------------------------"
 echo "--  Bootloader Grub Installation    --"
 echo "--------------------------------------"
-pacman -S grub efibootmgr efivar intel-ucode --noconfirm
+pacman -S grub efibootmgr efivar intel-ucode --noconfirm --needed
 grub-install "${DISK}"
 grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "--------------------------------------"
 echo "--          Network Setup           --"
 echo "--------------------------------------"
-pacman -S networkmanager wpa_supplicant wireless_tools --noconfirm
+pacman -S networkmanager wpa_supplicant wireless_tools --noconfirm --needed
 systemctl enable NetworkManager
 
 echo "--------------------------------------"
