@@ -59,6 +59,7 @@ mount "${DISK}1" /mnt/boot/
 mkdir /mnt/home
 mount "${DISK}3" /mnt/home/
 
+
 echo "--------------------------------------"
 echo "--   Arch Install on Main Drive     --"
 echo "--------------------------------------"
