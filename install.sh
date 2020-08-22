@@ -46,7 +46,7 @@ sgdisk -c 3:"HOME" ${DISK}
 # make filesystems
 echo -e "\nCreating Filesystems...\n$HR"
 
-mkfs.vfat -F32 "${DISK}1"
+mkfs.fat -F 32 "${DISK}1"
 mkfs.ext4 "${DISK}2"
 mkfs.ext4 "${DISK}3"
 
@@ -65,30 +65,17 @@ echo "--   Arch Install on Main Drive     --"
 echo "--------------------------------------"
 pacstrap /mnt base base-devel linux linux-headers linux-firmware linux-lts linux-lts-headers vim nano bash-completion --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
 
 echo "--------------------------------------"
 echo "--  Bootloader Grub Installation    --"
 echo "--------------------------------------"
-pacman -S grub efibootmgr efivar intel-ucode --noconfirm --needed
+pacstrap /mnt grub efibootmgr efivar intel-ucode --noconfirm --needed
 grub-install "${DISK}"
-grub-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /mnt/boot/grub/grub.cfg
 
 echo "--------------------------------------"
 echo "--          Network Setup           --"
 echo "--------------------------------------"
-pacman -S networkmanager wpa_supplicant wireless_tools --noconfirm --needed
-systemctl enable NetworkManager
+pacstrap /mnt networkmanager wpa_supplicant wireless_tools --noconfirm --needed
 
-echo "--------------------------------------"
-echo "--      Set Password for Root       --"
-echo "--------------------------------------"
-echo "Enter password for root user: "
-passwd root
-
-exit
-umount -R /mnt
-
-echo "--------------------------------------"
-echo "--   SYSTEM READY FOR FIRST BOOT    --"
-echo "--------------------------------------"
+arch-chroot /mnt
