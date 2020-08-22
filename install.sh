@@ -63,13 +63,13 @@ mount "${DISK}3" /mnt/home/
 echo "--------------------------------------"
 echo "--   Arch Install on Main Drive     --"
 echo "--------------------------------------"
-pacstrap /mnt base base-devel linux linux-headers linux-firmware linux-lts linux-lts-headers vim nano bash-completion --noconfirm
+pacstrap /mnt base base-devel linux --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "--------------------------------------"
 echo "--  Bootloader Grub Installation    --"
 echo "--------------------------------------"
-pacstrap /mnt grub efibootmgr efivar intel-ucode --noconfirm --needed
+pacstrap /mnt grub efibootmgr efivar --noconfirm --needed
 grub-install "${DISK}"
 grub-mkconfig -o /mnt/boot/grub/grub.cfg
 
