@@ -41,5 +41,5 @@ echo "--------------------------------------"
 nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
 
 
-echo 'After umounting all partitions from "/mnt", you're system is ready for a first reboot'
+echo 'After umounting all partitions from "/mnt", you're system is ready for the first reboot'
 exit
