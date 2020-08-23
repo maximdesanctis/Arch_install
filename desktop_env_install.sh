@@ -29,3 +29,5 @@ pacman -S plasma-nm bluedevil plasma-pa --noconfirm --needed
 
 # install additional sofware
 pacman -S kinfocenter spectacle--noconfirm --needed
+
+reboot
