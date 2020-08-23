@@ -17,6 +17,7 @@ pacman -S bluez bluez-utils --noconfirm --needed
 
 # install kde
 pacman -S plasma-desktop konsole dolphin firefox gedit --noconfirm --needed
+systemctl enable sddm
 
 # install kde themes
 pacman -S breeze-gtk breeze-kde5 kde-gtk-config --noconfirm --needed
