@@ -5,6 +5,7 @@ echo "--------------------------------------"
 echo "--       Root Password Setup        --"
 echo "--------------------------------------"
 passwd
+clear
 
 
 echo "--------------------------------------"
@@ -16,6 +17,7 @@ echo "Please enter disk to install grub on: (example /dev/sda)"
 read DISK
 grub-install "${DISK}"
 grub-mkconfig -o /boot/grub/grub.cfg
+clear
 
 
 echo "--------------------------------------"
@@ -23,6 +25,7 @@ echo "--          Network Setup           --"
 echo "--------------------------------------"
 pacman -S networkmanager wpa_supplicant wireless_tools dialog --noconfirm --needed
 systemctl enable NetworkManager
+clear
 
 
 
@@ -33,13 +36,14 @@ pacman -S ufw
 ufw default deny incoming
 ufw default allow outgoing
 systemctl enable ufw
-sleep 5
+clear
 
 
 echo "--------------------------------------"
 echo "--       Basic Software Setup       --"
 echo "--------------------------------------"
 pacman -S git nano vim bash-completion --noconfirm --needed
+clear
 
 
 echo "--------------------------------------"
@@ -57,12 +61,12 @@ echo '::1   localhost' > /etc/hosts
 timedatectl set-timezone Europe/Berlin
 timedatectl set-ntp true
 timedatectl status
-sleep 5
 
 # set language
 nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
+clear
 
 echo 'After umounting all partitions from "/mnt", you're system is ready for the first reboot'
 exit
