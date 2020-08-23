@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+
+echo "--------------------------------------"
+echo "--       Root Password Setup        --"
+echo "--------------------------------------"
+passwd
+
+
 echo "--------------------------------------"
 echo "--  Bootloader Grub Installation    --"
 echo "--------------------------------------"
@@ -56,12 +63,6 @@ sleep 5
 nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
-
-
-echo "--------------------------------------"
-echo "--       Root Password Setup        --"
-echo "--------------------------------------"
-passwd
 
 echo 'After umounting all partitions from "/mnt", you're system is ready for the first reboot'
 exit
