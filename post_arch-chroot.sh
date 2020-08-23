@@ -55,8 +55,6 @@ nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
 
-sleep 5
-
 
 echo "--------------------------------------"
 echo "--       Root Password Setup        --"
