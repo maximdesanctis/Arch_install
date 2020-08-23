@@ -30,9 +30,9 @@ sleep 5
 
 
 echo "--------------------------------------"
-echo "--         Software Setup           --"
+echo "--       Basic Software Setup       --"
 echo "--------------------------------------"
-pacman -S git nano vim bash-completion gedit
+pacman -S git nano vim bash-completion --noconfirm --needed
 
 
 echo "--------------------------------------"
