@@ -9,20 +9,15 @@ timedatectl set-ntp true
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 curl -s "https://www.archlinux.org/mirrorlist/?country=DE&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on" | sed -e 's/^#Server/Server/g' > /etc/pacman.d/mirrorlist
 pacman -Syy
+clear
 
 
-
-echo -e "\nInstalling prereqs...\n$HR"
-
-echo "-------------------------------------------------"
-echo "--          select your disk to format         --"
-echo "-------------------------------------------------"
+echo "--------------------------------------"
+echo "--          Partitioning            --"
+echo "--------------------------------------"
 lsblk
 echo "Please enter disk: (example /dev/sda)"
 read DISK
-echo "--------------------------------------"
-echo -e "\nFormatting disk...\n$HR"
-echo "--------------------------------------"
 
 # disk prep
 sgdisk -Z ${DISK} # destroy existing mbr or gpt structures on disk
@@ -44,8 +39,6 @@ sgdisk -c 2:"ROOT" ${DISK}
 sgdisk -c 3:"HOME" ${DISK}
 
 # make filesystems
-echo -e "\nCreating Filesystems...\n$HR"
-
 mkfs.fat -F32 "${DISK}1"
 mkfs.ext4 "${DISK}2"
 mkfs.ext4 "${DISK}3"
