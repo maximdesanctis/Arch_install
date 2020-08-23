@@ -44,7 +44,6 @@ mkfs.ext4 "${DISK}2"
 mkfs.ext4 "${DISK}3"
 
 # mount partitions
-mkdir /mnt
 mount "${DISK}2" /mnt
 mkdir /mnt/boot
 mkdir /mnt/boot/efi
