@@ -24,8 +24,8 @@ pacman -S breeze-gtk breeze-kde5 kde-gtk-config --noconfirm --needed
 # install kde addons
 pacman -S kdeplasman-addons
 
-# install kde network manager, kde bluetooth manager, kde audio manager
-pacman -S plasma-nm bluedevil plasma-pa --noconfirm --needed
+# install useful kde managers
+pacman -S plasma-nm bluedevil plasma-pa cups print-manager system-config-manager powerdevil --noconfirm --needed
 
 # install additional sofware
 pacman -S kinfocenter spectacle--noconfirm --needed
