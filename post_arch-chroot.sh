@@ -16,3 +16,20 @@ echo "--          Network Setup           --"
 echo "--------------------------------------"
 pacman -S networkmanager wpa_supplicant wireless_tools --noconfirm --needed
 systemctl enable NetworkManager
+
+
+
+echo "--------------------------------------"
+echo "--         Firewall Setup           --"
+echo "--------------------------------------"
+pacman -S ufw
+ufw default deny incoming
+ufw default allow outgoing
+systemctl ufw enable
+sleep 5
+
+
+echo "--------------------------------------"
+echo "--         Software Setup           --"
+echo "--------------------------------------"
+pacman -S git nano vim bash-completion
