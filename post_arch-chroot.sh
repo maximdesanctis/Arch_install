@@ -38,8 +38,30 @@ pacman -S git nano vim bash-completion gedit
 echo "--------------------------------------"
 echo "--          Locale Setup            --"
 echo "--------------------------------------"
-nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
+# set german keyboard layout
+echo KEYMAP=de-latin1 > /etc/vconsole.conf
 
+# set hostname and loopback address
+echo ArchLinuxTest > /etc/hostname
+echo '127.0.0.1   localhost' > /etc/hosts
+echo '::1   localhost' > /etc/hosts
+
+# set timezone and enable ntp
+timedatectl set-timezone Europe/Berlin
+timedatectl set-ntp true
+
+# set language
+nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+locale-gen
+
+sleep 5
+
+
+echo "--------------------------------------"
+echo "--       Root Password Setup        --"
+echo "--------------------------------------"
+passwd
 
 echo 'After umounting all partitions from "/mnt", you're system is ready for the first reboot'
 exit
