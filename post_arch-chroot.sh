@@ -49,6 +49,8 @@ echo '::1   localhost' > /etc/hosts
 # set timezone and enable ntp
 timedatectl set-timezone Europe/Berlin
 timedatectl set-ntp true
+timedatectl status
+sleep 5
 
 # set language
 nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
