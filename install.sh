@@ -46,7 +46,7 @@ sgdisk -c 3:"HOME" ${DISK}
 # make filesystems
 echo -e "\nCreating Filesystems...\n$HR"
 
-mkfs.fat -F 32 "${DISK}1"
+mkfs.fat -F32 "${DISK}1"
 mkfs.ext4 "${DISK}2"
 mkfs.ext4 "${DISK}3"
 
@@ -61,24 +61,9 @@ mount "${DISK}3" /mnt/home/
 
 
 echo "--------------------------------------"
-echo "--   Arch Install on Main Drive     --"
+echo "--        Arch Base Install         --"
 echo "--------------------------------------"
-pacstrap /mnt base base-devel linux --noconfirm
+pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
-
-echo "--------------------------------------"
-echo "--  Bootloader Grub Installation    --"
-echo "--------------------------------------"
-pacstrap /mnt grub efibootmgr efivar --noconfirm --needed
-grub-install "${DISK}"
-grub-mkconfig -o /mnt/boot/grub/grub.cfg
-
-echo "--------------------------------------"
-echo "--          Network Setup           --"
-echo "--------------------------------------"
-pacstrap /mnt networkmanager wpa_supplicant wireless_tools --noconfirm --needed
-pacstrap /mnt git --noconfirm --needed
-
-clear
 
 arch-chroot /mnt
