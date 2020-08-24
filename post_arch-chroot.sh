@@ -12,6 +12,7 @@ echo "--------------------------------------"
 echo "--  Bootloader Grub Installation    --"
 echo "--------------------------------------"
 pacman -S grub efibootmgr efivar intel-ucode --noconfirm
+clear
 lsblk
 echo "Please enter disk to install grub on: (example /dev/sda)"
 read DISK
