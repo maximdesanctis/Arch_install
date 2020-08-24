@@ -34,4 +34,5 @@ pacman -S kinfocenter spectacle --noconfirm --needed
 # install printing sofware
 pacman -S hplip cups print-manager
 systemctl enable org.cups.cupsd.service
+
 reboot
