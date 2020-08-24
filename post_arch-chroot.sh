@@ -69,5 +69,4 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
 clear
 
-echo 'After umounting all partitions from "/mnt", you're system is ready for the first reboot'
-exit
+echo "After exiting arch-chroot and then umounting all partitions from /mnt, you're system is ready for the first reboot"
