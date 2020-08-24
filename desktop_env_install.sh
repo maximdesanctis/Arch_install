@@ -29,6 +29,6 @@ pacman -S kdeplasman-addons
 pacman -S plasma-nm bluedevil plasma-pa cups print-manager system-config-manager powerdevil --noconfirm --needed
 
 # install additional sofware
-pacman -S kinfocenter spectacle--noconfirm --needed
+pacman -S kinfocenter spectacle --noconfirm --needed
 
 reboot
