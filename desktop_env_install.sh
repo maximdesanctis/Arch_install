@@ -4,10 +4,11 @@
 useradd -m jogi
 usermod -aG wheel jogi
 passwd jogi
-EDITOR=nano visudo | sed -e 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL'
+EDITOR=nano visudo | sed -e "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL"
 
 # install graphical utils
-pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts --noconfirm --needed
+pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm--noconfirm --needed
+systemctl enable sddm
 
 # install audio
 pacman -S pulsaudio pulseaudio-alsa --noconfirm --needed
@@ -17,7 +18,6 @@ pacman -S bluez bluez-utils --noconfirm --needed
 
 # install kde
 pacman -S plasma-desktop konsole dolphin firefox gedit --noconfirm --needed
-systemctl enable sddm
 
 # install kde themes
 pacman -S breeze-gtk breeze-kde5 kde-gtk-config --noconfirm --needed
