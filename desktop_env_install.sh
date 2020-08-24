@@ -11,7 +11,7 @@ pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm--
 systemctl enable sddm
 
 # install audio
-pacman -S pulsaudio pulseaudio-alsa --noconfirm --needed
+pacman -S pulseaudio pulseaudio-alsa --noconfirm --needed
 
 # install bluetooth
 pacman -S bluez bluez-utils --noconfirm --needed
@@ -20,13 +20,13 @@ pacman -S bluez bluez-utils --noconfirm --needed
 pacman -S plasma-desktop konsole dolphin firefox gedit --noconfirm --needed
 
 # install kde themes
-pacman -S breeze-gtk breeze-kde5 kde-gtk-config --noconfirm --needed
+pacman -S breeze-gtk kde-gtk-config --noconfirm --needed
 
 # install kde addons
-pacman -S kdeplasman-addons --noconfirm --needed
+pacman -S kdeplasma-addons --noconfirm --needed
 
 # install useful kde managers
-pacman -S plasma-nm bluedevil plasma-pa cups print-manager system-config-manager powerdevil --noconfirm --needed
+pacman -S plasma-nm bluedevil plasma-pa cups samba print-manager powerdevil --noconfirm --needed
 
 # install additional sofware
 pacman -S kinfocenter spectacle --noconfirm --needed
