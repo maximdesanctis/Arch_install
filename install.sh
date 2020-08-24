@@ -24,7 +24,7 @@ sgdisk -Z ${DISK} # destroy existing mbr or gpt structures on disk
 sgdisk -a 2048 -o ${DISK} # new gpt disk 2048 alignment
 
 # create partitions
-sgdisk -n 1:0:+1000M ${DISK} # partition 1 (ESP), default start block, 1GB
+sgdisk -n 1:0:+512M ${DISK} # partition 1 (ESP), default start block, 512MB
 sgdisk -n 2:0:+30G ${DISK} # partition 2 (ROOT), default start, 30GB
 sgdisk -n 3:0:0 ${DISK} # partition 3 (HOME), default start, remaining space
 
@@ -45,13 +45,18 @@ mkfs.ext4 "${DISK}3"
 
 # mount partitions
 mount "${DISK}2" /mnt
-mkdir /mnt/boot
-mkdir /mnt/boot/efi
-mount "${DISK}1" /mnt/boot/
+mkdir -p /mnt/boot/efi
+mount "${DISK}1" /mnt/boot/efi
 mkdir /mnt/home
 mount "${DISK}3" /mnt/home/
 clear
-
+lsblk
+echo 'Do you want to continue? (y/N)'
+read wish
+if [ ${wish} != 'y' ]
+then
+  exit
+fi
 
 echo "--------------------------------------"
 echo "--        Arch Base Install         --"
