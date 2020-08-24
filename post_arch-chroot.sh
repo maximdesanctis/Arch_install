@@ -33,7 +33,7 @@ clear
 echo "--------------------------------------"
 echo "--         Firewall Setup           --"
 echo "--------------------------------------"
-pacman -S ufw
+pacman -S ufw --noconfirm --needed
 ufw default deny incoming
 ufw default allow outgoing
 systemctl enable ufw
