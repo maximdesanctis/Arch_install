@@ -7,7 +7,7 @@ passwd jogi
 EDITOR=nano visudo | sed "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL"
 
 # install graphical utils
-pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm--noconfirm --needed
+pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm --noconfirm --needed
 systemctl enable sddm
 
 # install audio
