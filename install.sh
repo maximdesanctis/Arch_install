@@ -16,7 +16,7 @@ echo "--------------------------------------"
 echo "--          Partitioning            --"
 echo "--------------------------------------"
 lsblk
-echo "Please enter disk: (example /dev/sda)"
+echo "Please enter disk to install Arch Linux on: (example /dev/sda)"
 read DISK
 
 # disk prep
