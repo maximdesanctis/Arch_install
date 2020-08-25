@@ -3,6 +3,7 @@
 # add new user
 useradd -m jogi
 usermod -aG wheel jogi
+echo "Please enter password for jogi:"
 passwd jogi
 EDITOR=nano visudo | sed "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL"
 
