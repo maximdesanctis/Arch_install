@@ -24,7 +24,7 @@ pacman -S gnome-shell gnome-terminal gnome-tweak-tool gnome-control-center xdg-u
 pacman -S kinfocenter --noconfirm --needed
 
 # install printing sofware
-pacman -S hplip cups print-manager
+pacman -S hplip cups print-manager --noconfirm --needed
 systemctl enable org.cups.cupsd.service
 
 reboot
