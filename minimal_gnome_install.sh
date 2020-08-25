@@ -14,10 +14,10 @@ systemctl enable gdm
 pacman -S pulseaudio pulseaudio-alsa --noconfirm --needed
 
 # install bluetooth
-pacman -S bluez bluez-utils gnome-bluetooth --noconfirm --needed
+pacman -S bluez bluez-utils --noconfirm --needed
 
 # install minimal gnome
-pacman -S gnome-shell gnome-terminal gnome-tweak-tool gnome-control-center xdg-user-dirs gnome-screenshot --noconfirm --needed
+pacman -S gnome-shell gnome-terminal gnome-tweak-tool gnome-control-center xdg-user-dirs gnome-screenshot gnome-bluetooth --noconfirm --needed
 
 # install additional sofware
 pacman -S kinfocenter --noconfirm --needed
