@@ -50,13 +50,6 @@ mount "${DISK}1" /mnt/boot/efi
 mkdir /mnt/home
 mount "${DISK}3" /mnt/home/
 clear
-lsblk
-echo 'Do you want to continue? (y/N)'
-read wish
-if [ ${wish} != 'y' ]
-then
-  exit
-fi
 
 echo "--------------------------------------"
 echo "--        Arch Base Install         --"
