@@ -26,6 +26,9 @@ pacman -S breeze-gtk kde-gtk-config --noconfirm --needed
 # install kde addons
 pacman -S kdeplasma-addons --noconfirm --needed
 
+# install latte-dock
+pacman -S latte-dock --noconfirm --needed
+
 # install useful kde managers
 pacman -S plasma-nm bluedevil plasma-pa powerdevil --noconfirm --needed
 
