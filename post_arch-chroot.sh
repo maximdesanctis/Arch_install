@@ -24,7 +24,7 @@ clear
 echo "--------------------------------------"
 echo "--          Network Setup           --"
 echo "--------------------------------------"
-pacman -S networkmanager wpa_supplicant wireless_tools dialog --noconfirm --needed
+pacman -S networkmanager --noconfirm --needed
 systemctl enable NetworkManager
 clear
 
