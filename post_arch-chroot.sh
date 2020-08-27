@@ -2,6 +2,13 @@
 
 
 echo "--------------------------------------"
+echo "--       Root Password Setup        --"
+echo "--------------------------------------"
+passwd
+clear
+
+
+echo "--------------------------------------"
 echo "--  Bootloader Grub Installation    --"
 echo "--------------------------------------"
 pacman -S grub efibootmgr intel-ucode --noconfirm
@@ -59,13 +66,6 @@ timedatectl status
 nano /etc/locale.gen | sed -e "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8"
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
-clear
-
-
-echo "--------------------------------------"
-echo "--       Root Password Setup        --"
-echo "--------------------------------------"
-passwd
 clear
 
 
