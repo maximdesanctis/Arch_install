@@ -54,7 +54,7 @@ clear
 echo "--------------------------------------"
 echo "--        Arch Base Install         --"
 echo "--------------------------------------"
-pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware --noconfirm
+pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
 clear
 
