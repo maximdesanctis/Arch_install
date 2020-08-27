@@ -2,16 +2,9 @@
 
 
 echo "--------------------------------------"
-echo "--       Root Password Setup        --"
-echo "--------------------------------------"
-passwd
-clear
-
-
-echo "--------------------------------------"
 echo "--  Bootloader Grub Installation    --"
 echo "--------------------------------------"
-pacman -S grub efibootmgr efivar intel-ucode --noconfirm
+pacman -S grub efibootmgr intel-ucode --noconfirm
 clear
 lsblk
 echo "Please enter disk to install grub on: (example /dev/sda)"
@@ -27,7 +20,6 @@ echo "--------------------------------------"
 pacman -S networkmanager --noconfirm --needed
 systemctl enable NetworkManager
 clear
-
 
 
 echo "--------------------------------------"
@@ -68,5 +60,13 @@ nano /etc/locale.gen | sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8'
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
 clear
+
+
+echo "--------------------------------------"
+echo "--       Root Password Setup        --"
+echo "--------------------------------------"
+passwd
+clear
+
 
 echo "After exiting arch-chroot and then umounting all partitions from /mnt, you're system is ready for the first reboot"
