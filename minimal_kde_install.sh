@@ -30,7 +30,7 @@ pacman -S plasma-nm bluedevil plasma-pa powerdevil --noconfirm --needed
 pacman -S kinfocenter spectacle --noconfirm --needed
 
 # install printing sofware
-pacman -S hplip cups print-manager
+pacman -S hplip cups print-manager --noconfirm --needed
 systemctl enable org.cups.cupsd.service
 
 reboot
