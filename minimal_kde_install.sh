@@ -15,16 +15,10 @@ systemctl enable sddm
 pacman -S pulseaudio --noconfirm --needed
 
 # install bluetooth
-pacman -S bluez bluez-utils --noconfirm --needed
+pacman -S bluez --noconfirm --needed
 
 # install kde
 pacman -S plasma-desktop konsole dolphin firefox gedit --noconfirm --needed
-
-# install kde themes
-pacman -S breeze-gtk kde-gtk-config --noconfirm --needed
-
-# install kde addons
-pacman -S kdeplasma-addons --noconfirm --needed
 
 # install latte-dock
 pacman -S latte-dock --noconfirm --needed
