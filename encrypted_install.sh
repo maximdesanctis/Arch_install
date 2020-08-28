@@ -50,13 +50,4 @@ mkdir -p /mnt/boot/efi
 mount "${DISK}1" /mnt/boot/efi
 mkdir /mnt/home
 mount -t fstype /dev/mapper/home /mnt/home
-clear
-
-echo "--------------------------------------"
-echo "--        Arch Base Install         --"
-echo "--------------------------------------"
-pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm
-genfstab -U /mnt >> /mnt/etc/fstab
-clear
-
-arch-chroot /mnt
+lsblk
