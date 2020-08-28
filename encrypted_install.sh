@@ -49,5 +49,5 @@ mount "${DISK}2" /mnt
 mkdir -p /mnt/boot/efi
 mount "${DISK}1" /mnt/boot/efi
 mkdir /mnt/home
-mount -t fstype /dev/mapper/home /mnt/home
+mount /dev/mapper/home /mnt/home
 lsblk
