@@ -33,6 +33,9 @@ sgdisk -t 1:ef00 ${DISK}
 sgdisk -t 2:8300 ${DISK}
 cryptsetup luksFormat "${DISK}3"
 cryptsetup open "${DISK}3" home
+lsblk
+echo "Do you want to continue?"
+read wish
 
 # label partitions
 sgdisk -c 1:"ESP" ${DISK}
