@@ -52,7 +52,9 @@ echo "--------------------------------------"
 echo "--        Arch Base Install         --"
 echo "--------------------------------------"
 pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt > /mnt/etc/fstab
+echo "home           ${DISK}3               none" >> /mnt/etc/crypttab
+
 clear
 
 arch-chroot /mnt
