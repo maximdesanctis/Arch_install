@@ -51,7 +51,7 @@ clear
 echo "--------------------------------------"
 echo "--        Arch Base Install         --"
 echo "--------------------------------------"
-pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm
+pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm --needed
 genfstab -U /mnt > /mnt/etc/fstab
 echo "home           ${DISK}3                                    none" >> /mnt/etc/crypttab
 clear
