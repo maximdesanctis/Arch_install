@@ -33,11 +33,6 @@ sgdisk -t 1:ef00 ${DISK}
 sgdisk -t 2:8300 ${DISK}
 sgdisk -t 3:8300 ${DISK}
 
-# label partitions
-sgdisk -c 1:"ESP" ${DISK}
-sgdisk -c 2:"ROOT" ${DISK}
-sgdisk -c 3:"HOME" ${DISK}
-
 # make filesystems
 mkfs.fat -F32 "${DISK}1"
 mkfs.ext4 "${DISK}2"
