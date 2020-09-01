@@ -34,11 +34,6 @@ sgdisk -t 2:8300 ${DISK}
 cryptsetup luksFormat "${DISK}3"
 cryptsetup open "${DISK}3" home
 
-# label partitions
-sgdisk -c 1:"ESP" ${DISK}
-sgdisk -c 2:"ROOT" ${DISK}
-sgdisk -c 3:"HOME" ${DISK}
-
 # make filesystems
 mkfs.fat -F32 "${DISK}1"
 mkfs.ext4 "${DISK}2"
@@ -51,4 +46,13 @@ mount "${DISK}1" /mnt/boot/efi
 mkdir /mnt/home
 mount /dev/mapper/home /mnt/home
 clear
-lsblk -f
+
+
+echo "--------------------------------------"
+echo "--        Arch Base Install         --"
+echo "--------------------------------------"
+pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm
+genfstab -U /mnt >> /mnt/etc/fstab
+clear
+
+arch-chroot /mnt
