@@ -8,6 +8,7 @@ passwd jogi
 EDITOR=nano visudo | sed -e "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL"
 pacman -S xdg-user-dirs --noconfirm --needed
 xdg-user-dirs-update
+rmdir /home/jogi/Public
 
 # install graphical utils
 pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm --noconfirm --needed
