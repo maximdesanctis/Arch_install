@@ -6,7 +6,7 @@ usermod -aG wheel jogi
 echo "Please enter password for jogi:"
 passwd jogi
 EDITOR=nano visudo | sed "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL"
-pacman -S xdg-user-dirs
+pacman -S xdg-user-dirs --noconfirm --needed
 xdg-user-dirs-update
 
 # install graphical utils
