@@ -37,7 +37,8 @@ systemctl enable org.cups.cupsd.service
 
 # install AUR helper yay
 git clone https://aur.archlinux.org/yay.git
-cd yay
+PWD=$(pwd)
+cd $PWD/yay
 makepkg -si
 
 reboot
