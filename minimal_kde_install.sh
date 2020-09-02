@@ -35,4 +35,9 @@ pacman -S kinfocenter spectacle --noconfirm --needed
 pacman -S hplip cups print-manager --noconfirm --needed
 systemctl enable org.cups.cupsd.service
 
+# install AUR helper yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
 reboot
