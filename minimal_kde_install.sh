@@ -15,10 +15,10 @@ pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm -
 systemctl enable sddm
 
 # install audio
-pacman -S pulseaudio --noconfirm --needed
+pacman -S pulseaudio pulseaudio-alsa --noconfirm --needed
 
 # install bluetooth
-pacman -S bluez --noconfirm --needed
+pacman -S bluez bluez-utils pulseaudio-bluetooth --noconfirm --needed
 systemctl enable bluetooth
 
 # install kde
