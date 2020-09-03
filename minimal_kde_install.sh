@@ -19,6 +19,7 @@ pacman -S pulseaudio --noconfirm --needed
 
 # install bluetooth
 pacman -S bluez --noconfirm --needed
+systemctl enable bluetooth
 
 # install kde
 pacman -S plasma-desktop konsole dolphin firefox gedit --noconfirm --needed
