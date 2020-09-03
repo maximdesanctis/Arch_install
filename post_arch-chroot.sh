@@ -40,7 +40,7 @@ clear
 
 
 echo "--------------------------------------"
-echo "--       Basic Software Setup       --"
+echo "--    Basic Software/Utils Setup    --"
 echo "--------------------------------------"
 pacman -S git nano vim bash-completion usbutils --noconfirm --needed
 clear
