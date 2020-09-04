@@ -11,7 +11,7 @@ xdg-user-dirs-update
 rmdir /home/jogi/Public
 
 # install graphical utils
-pacman -S xorg-server mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm --noconfirm --needed
+pacman -S xorg-server xorg-xrandr mesa nvidia nvidia-utils nvidia-settings nvidia-lts sddm --noconfirm --needed
 systemctl enable sddm
 
 # install audio
