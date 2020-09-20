@@ -1,8 +1,11 @@
 #!/bin/bash
 
-declare -a programs=(#"spectacle"
+declare -a programs=("spectacle"
                      "kinfocenter"
-                     "gparted")
+                     "codeblocks"
+                     "pycharm-community-edition"
+                     "keepassxc"
+                     "plasma-thunderbolt")
 
 for i in "${programs[@]}"
 do
