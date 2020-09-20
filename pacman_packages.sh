@@ -3,6 +3,7 @@
 declare -a programs=("spectacle"
                      "kinfocenter"
                      "codeblocks"
+                     "xterm"
                      "pycharm-community-edition"
                      "keepassxc"
                      "plasma-thunderbolt")
