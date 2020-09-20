@@ -2,7 +2,7 @@
 
 declare -a programs=("spectacle"
                      "kinfocenter"
-                     "")
+                     "gparted")
 
 for i in "${programs[@]}"
 do
