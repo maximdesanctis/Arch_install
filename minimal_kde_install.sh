@@ -29,9 +29,6 @@ pacman -S latte-dock --noconfirm --needed
 # install useful kde managers
 pacman -S plasma-nm bluedevil plasma-pa powerdevil plasma-thunderbolt --noconfirm --needed
 
-# install additional sofware
-pacman -S kinfocenter spectacle --noconfirm --needed
-
 # install printing sofware
 pacman -S hplip cups print-manager --noconfirm --needed
 systemctl enable org.cups.cupsd.service
