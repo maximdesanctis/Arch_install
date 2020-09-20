@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a programs=("spectacle"
+declare -a programs=(#"spectacle"
                      "kinfocenter"
                      "gparted")
 
