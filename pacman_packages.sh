@@ -5,7 +5,6 @@ declare -a programs=("spectacle"
                      "codeblocks"
                      "xterm"
                      "pycharm-community-edition"
-                     "arduino"
                      "keepassxc"
                      "plasma-thunderbolt")
 
