@@ -35,7 +35,7 @@ echo "--------------------------------------"
 pacman -S ufw --noconfirm --needed
 ufw default deny incoming
 ufw default allow outgoing
-systemctl enable ufw
+ufw enable
 clear
 
 
