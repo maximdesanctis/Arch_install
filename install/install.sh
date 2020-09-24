@@ -29,14 +29,14 @@ sgdisk -n 2:0:+30G ${DISK} # partition 2 (ROOT), default start, 30GB
 sgdisk -n 3:0:0 ${DISK} # partition 3 (HOME), default start, remaining space
 
 # set partition types
-sgdisk -t 1:ef00 ${DISK}
-sgdisk -t 2:8300 ${DISK}
-sgdisk -t 3:8300 ${DISK}
+sgdisk -t 1:ef00 ${DISK} # set partition type to EFI System partition
+sgdisk -t 2:8300 ${DISK} # set partition type to Linux filesystem
+sgdisk -t 3:8300 ${DISK} # set partition type to Linux filesystem
 
 # make filesystems
-mkfs.fat -F32 "${DISK}1"
-mkfs.ext4 "${DISK}2"
-mkfs.ext4 "${DISK}3"
+mkfs.fat -F32 "${DISK}1" # create FAT32 Filesystem
+mkfs.ext4 "${DISK}2" # create Ext4 Filesystem
+mkfs.ext4 "${DISK}3" # create Ext4 Filesystem
 
 # mount partitions
 mount "${DISK}2" /mnt
