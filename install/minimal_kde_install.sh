@@ -5,6 +5,7 @@ useradd -m jogi
 usermod -aG wheel jogi
 echo "Please enter password for jogi:"
 passwd jogi
+sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g" /etc/sudoers
 pacman -S xdg-user-dirs --noconfirm --needed
 xdg-user-dirs-update
 
