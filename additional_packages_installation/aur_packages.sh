@@ -2,7 +2,8 @@
 
 # you need to have yay installed
 
-declare -a programs=()
+declare -a programs=(
+                    "visual-studio-code-bin")
 
 for i in "${programs[@]}"
 do
