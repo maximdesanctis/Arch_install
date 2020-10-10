@@ -25,7 +25,7 @@ sgdisk -a 2048 -o ${DISK} # new gpt disk 2048 alignment
 
 # create partitions
 sgdisk -n 1:0:+1G ${DISK} # partition 1 (ESP), default start block, 1GB
-sgdisk -n 2:0:+30G ${DISK} # partition 2 (ROOT), default start, 30GB
+sgdisk -n 2:0:+100G ${DISK} # partition 2 (ROOT), default start, 30GB
 sgdisk -n 3:0:0 ${DISK} # partition 3 (HOME), default start, remaining space
 
 # set partition types
