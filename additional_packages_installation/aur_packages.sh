@@ -3,7 +3,8 @@
 # you need to have yay installed
 
 declare -a programs=(
-                    "visual-studio-code-bin")
+                    "visual-studio-code-bin"
+                    "spotify")
 
 for i in "${programs[@]}"
 do
