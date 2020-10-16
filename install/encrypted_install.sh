@@ -31,18 +31,18 @@ sgdisk -n 3:0:0 ${DISK} # partition 3 (HOME), default start, remaining space
 # set partition types
 sgdisk -t 1:ef00 ${DISK}
 sgdisk -t 2:8300 ${DISK}
-cryptsetup luksFormat "${DISK}3"
-cryptsetup open "${DISK}3" home
+cryptsetup luksFormat "${DISK}p3"
+cryptsetup open "${DISK}p3" home
 
 # make filesystems
-mkfs.fat -F32 "${DISK}1"
-mkfs.ext4 "${DISK}2"
+mkfs.fat -F32 "${DISK}p1"
+mkfs.ext4 "${DISK}p2"
 mkfs.ext4 /dev/mapper/home
 
 # mount partitions
-mount "${DISK}2" /mnt
+mount "${DISK}p2" /mnt
 mkdir -p /mnt/boot/efi
-mount "${DISK}1" /mnt/boot/efi
+mount "${DISK}p1" /mnt/boot/efi
 mkdir /mnt/home
 mount /dev/mapper/home /mnt/home
 clear
@@ -53,7 +53,7 @@ echo "--        Arch Base Install         --"
 echo "--------------------------------------"
 pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm --needed
 genfstab -U /mnt > /mnt/etc/fstab
-echo "home           ${DISK}3                                    none" >> /mnt/etc/crypttab
+echo "home           ${DISK}p3                                    none" >> /mnt/etc/crypttab
 clear
 
 arch-chroot /mnt
