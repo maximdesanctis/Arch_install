@@ -21,7 +21,7 @@ pacman -S bluez bluez-utils pulseaudio-bluetooth --noconfirm --needed
 systemctl enable bluetooth
 
 # install kde
-pacman -S plasma-desktop konsole dolphin firefox gedit --noconfirm --needed
+pacman -S plasma-desktop konsole dolphin firefox --noconfirm --needed
 
 # install latte-dock
 pacman -S latte-dock --noconfirm --needed
