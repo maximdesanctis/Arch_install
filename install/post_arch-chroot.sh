@@ -53,9 +53,9 @@ echo "--------------------------------------"
 echo KEYMAP=de-latin1 > /etc/vconsole.conf
 
 # set hostname and loopback address
-echo ArchLinuxTest > /etc/hostname
-echo '127.0.0.1   localhost' > /etc/hosts
-echo '::1   localhost' > /etc/hosts
+echo ArchLinuxTest >> /etc/hostname
+echo '127.0.0.1   localhost' >> /etc/hosts
+echo '::1   localhost' >> /etc/hosts
 
 # set timezone and enable ntp
 timedatectl set-timezone Europe/Berlin
