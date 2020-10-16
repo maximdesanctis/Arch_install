@@ -34,16 +34,16 @@ sgdisk -t 2:8300 ${DISK}
 sgdisk -t 3:8300 ${DISK}
 
 # make filesystems
-mkfs.fat -F32 "${DISK}1"
-mkfs.ext4 "${DISK}2"
-mkfs.ext4 "${DISK}3"
+mkfs.fat -F32 "${DISK}p1"
+mkfs.ext4 "${DISK}p2"
+mkfs.ext4 "${DISK}p3"
 
 # mount partitions
-mount "${DISK}2" /mnt
+mount "${DISK}p2" /mnt
 mkdir -p /mnt/boot/efi
-mount "${DISK}1" /mnt/boot/efi
+mount "${DISK}p1" /mnt/boot/efi
 mkdir /mnt/home
-mount "${DISK}3" /mnt/home/
+mount "${DISK}p3" /mnt/home/
 clear
 
 echo "--------------------------------------"
