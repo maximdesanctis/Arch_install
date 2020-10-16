@@ -18,6 +18,7 @@ echo "Please enter disk to install grub on: (example /dev/sda)"
 read DISK
 grub-install "${DISK}"
 grub-mkconfig -o /boot/grub/grub.cfg
+sed -i "s/GRUB_TIMEOUT=5/GRUB_TIMEOUT=3/g" /etc/default/grub
 clear
 
 
