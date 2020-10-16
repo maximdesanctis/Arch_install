@@ -1,6 +1,8 @@
 #!/bin/bash
 
 declare -a programs=("spectacle"
+                     "kate"
+                     "gwenview"
                      "kinfocenter"
                      "codeblocks"
                      "xterm"
