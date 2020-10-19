@@ -4,10 +4,9 @@ declare -a programs=("spectacle"
                      "kate"
                      "gwenview"
                      "kinfocenter"
-                     "codeblocks"
-                     "xterm"
                      "pycharm-community-edition"
-                     "keepassxc")
+                     "keepassxc"
+                     "dragon")
 
 for i in "${programs[@]}"
 do
