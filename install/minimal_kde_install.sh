@@ -32,5 +32,6 @@ pacman -S plasma-nm bluedevil plasma-pa powerdevil plasma-thunderbolt --noconfir
 # install printing sofware
 pacman -S hplip cups print-manager --noconfirm --needed
 systemctl enable org.cups.cupsd.service
+cp /etc/cups/cupsd.conf /etc/cups/cupsd.conf.bak
 
 reboot
