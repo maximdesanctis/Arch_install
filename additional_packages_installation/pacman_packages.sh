@@ -7,14 +7,7 @@ declare -a programs=("spectacle"
                      "pycharm-community-edition"
                      "keepassxc"
                      "dragon"
-                     "virt-manager"
-                     "qemu"
-                     "qemu-arch-extra"
-                     "ovmf"
-                     "vde2"
-                     "ebtables"
-                     "dnsmasq"
-                     "openbsd-netcat")
+                     "virtualbox")
 
 for i in "${programs[@]}"
 do
