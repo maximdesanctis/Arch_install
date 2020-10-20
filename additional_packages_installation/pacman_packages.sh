@@ -6,9 +6,19 @@ declare -a programs=("spectacle"
                      "kinfocenter"
                      "pycharm-community-edition"
                      "keepassxc"
-                     "dragon")
+                     "dragon"
+                     "virt-manager"
+                     "qemu"
+                     "qemu-arch-extra"
+                     "ovmf"
+                     "vde2"
+                     "ebtables"
+                     "dnsmasq"
+                     "openbsd-netcat")
 
 for i in "${programs[@]}"
 do
   pacman -S "$i" --noconfirm --needed
 done
+
+systemctl enable libvirtd
