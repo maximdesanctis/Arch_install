@@ -7,7 +7,9 @@ declare -a programs=("spectacle"
                      "pycharm-community-edition"
                      "keepassxc"
                      "dragon"
-                     "virtualbox")
+                     "virtualbox"
+                     "nfs-utils"
+                     "openssh")
 
 for i in "${programs[@]}"
 do
