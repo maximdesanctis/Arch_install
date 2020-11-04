@@ -1,6 +1,10 @@
 #!/bin/env bash
 
-# you need to have yay installed
+# yay installation
+cd /opt
+sudo git clone https://aur.archlinux.org/yay.git
+cd /opt/yay
+makepkg -si
 
 declare -a programs=(
                     "visual-studio-code-bin"
