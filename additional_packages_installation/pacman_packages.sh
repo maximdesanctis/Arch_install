@@ -3,24 +3,24 @@
 declare -a programs=(
 
 # terminal utils
-"rsync"
-"openssh"
-"nfs-utils"
-"usbutils"
-"cronie"
-"curl"
-"wget"
-"bash-completion"
-"vim"
-"nano"
-"git"
+  "rsync"
+  "openssh"
+  "nfs-utils"
+  "usbutils"
+  "cronie"
+  "curl"
+  "wget"
+  "bash-completion"
+  "vim"
+  "nano"
+  "git"
 
 
 # development utils
-"pycharm-community-edition"
-"virtualbox"
-"wireshark-qt"
-"gparted"
+  "pycharm-community-edition"
+  "virtualbox"
+  "wireshark-qt"
+  "gparted"
 
 # desktop utils
   "spectacle"
@@ -29,6 +29,7 @@ declare -a programs=(
   "kinfocenter"
   "keepassxc"
   "dragon"
+  "vlc"
   
 )
 
