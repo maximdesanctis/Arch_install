@@ -29,7 +29,6 @@ declare -a programs=(
   "kinfocenter"
   "keepassxc"
   "dragon"
-  "vlc"
   
 )
 
