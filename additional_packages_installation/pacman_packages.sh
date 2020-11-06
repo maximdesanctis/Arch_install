@@ -6,10 +6,21 @@ declare -a programs=(
 "rsync"
 "openssh"
 "nfs-utils"
+"usbutils"
+"cronie"
+"curl"
+"wget"
+"bash-completion"
+"vim"
+"nano"
+"git"
+
 
 # development utils
 "pycharm-community-edition"
 "virtualbox"
+"wireshark-qt"
+"gparted"
 
 # desktop utils
   "spectacle"
@@ -26,5 +37,7 @@ do
   pacman -S "$i" --noconfirm --needed
 done
 
-systemctl enable libvirtd
+# configure newly installed services
+usermod -aG wireshark jogi
+
 reboot
