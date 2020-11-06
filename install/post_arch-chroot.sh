@@ -42,7 +42,7 @@ clear
 echo "--------------------------------------"
 echo "--    Basic Software/Utils Setup    --"
 echo "--------------------------------------"
-pacman -S git nano vim bash-completion usbutils openssh --noconfirm --needed
+pacman -S git nano vim bash-completion --noconfirm --needed
 clear
 
 
