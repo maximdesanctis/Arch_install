@@ -10,7 +10,7 @@ pacman -S xdg-user-dirs --noconfirm --needed
 xdg-user-dirs-update
 
 # install graphical utils
-pacman -S xorg-server xorg-xrandr mesa nvidia nvidia-utils nvidia-settings nvidia-lts nvidia-prime sddm --noconfirm --needed
+pacman -S xorg-server xorg-xrandr mesa nvidia nvidia-utils nvidia-settings nvidia-lts nvidia-prime sddm sddm-kcm --noconfirm --needed
 systemctl enable sddm
 
 # install audio
