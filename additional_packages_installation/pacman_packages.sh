@@ -1,15 +1,25 @@
 #!/bin/bash
 
-declare -a programs=("spectacle"
-                     "kate"
-                     "gwenview"
-                     "kinfocenter"
-                     "pycharm-community-edition"
-                     "keepassxc"
-                     "dragon"
-                     "virtualbox"
-                     "nfs-utils"
-                     "openssh")
+declare -a programs=(
+
+# terminal utils
+"rsync"
+"openssh"
+"nfs-utils"
+
+# development utils
+"pycharm-community-edition"
+"virtualbox"
+
+# desktop utils
+  "spectacle"
+  "kate"
+  "gwenview"
+  "kinfocenter"
+  "keepassxc"
+  "dragon"
+  
+)
 
 for i in "${programs[@]}"
 do
