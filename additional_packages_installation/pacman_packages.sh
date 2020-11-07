@@ -17,6 +17,8 @@ declare -a programs=(
 
 
 # development utils
+  "python"
+  "python-pip"
   "pycharm-community-edition"
   "virtualbox"
   "wireshark-qt"
@@ -43,5 +45,6 @@ done
 usermod -aG wireshark jogi
 usermod -aG uucp jogi
 usermod -aG lock jogi
+pip install pyserial
 
 reboot
