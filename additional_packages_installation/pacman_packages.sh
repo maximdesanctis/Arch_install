@@ -21,6 +21,8 @@ declare -a programs=(
   "virtualbox"
   "wireshark-qt"
   "gparted"
+  "arduino"
+  "arduino-avr-core"
 
 # desktop utils
   "spectacle"
