@@ -41,5 +41,7 @@ done
 
 # configure newly installed services
 usermod -aG wireshark jogi
+usermod -aG uucp jogi
+usermod -aG lock jogi
 
 reboot
