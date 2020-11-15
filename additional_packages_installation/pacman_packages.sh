@@ -14,6 +14,7 @@ declare -a programs=(
   "vim"
   "nano"
   "git"
+  "speedtest-cli"
 
 
 # development utils
