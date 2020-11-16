@@ -34,6 +34,9 @@ declare -a programs=(
   "kinfocenter"
   "keepassxc"
   "dragon"
+
+# system utils
+  "tlp"
   
 )
 
@@ -46,6 +49,6 @@ done
 usermod -aG wireshark jogi
 usermod -aG uucp jogi
 usermod -aG lock jogi
-pip install pyserial
+pip install pyserial        # python import for arduino
 
 reboot
