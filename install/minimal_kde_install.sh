@@ -34,4 +34,7 @@ pacman -S hplip cups print-manager --noconfirm --needed
 systemctl enable org.cups.cupsd.service
 cp /etc/cups/cupsd.conf /etc/cups/cupsd.conf.bak
 
+# create gpg key for KDEWallet
+gpg --full-gen-key
+
 reboot
