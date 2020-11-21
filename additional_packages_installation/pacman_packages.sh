@@ -15,6 +15,7 @@ declare -a programs=(
   "nano"
   "git"
   "speedtest-cli"
+  "nmap"
 
 
 # development utils
