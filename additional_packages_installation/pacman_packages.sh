@@ -16,6 +16,7 @@ declare -a programs=(
   "git"
   "speedtest-cli"
   "nmap"
+  "ettercap"
 
 
 # development utils
