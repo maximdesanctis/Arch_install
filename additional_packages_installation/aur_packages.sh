@@ -7,8 +7,12 @@ cd /opt/yay
 makepkg -si
 
 declare -a programs=(
-                    "visual-studio-code-bin"
-                    "spotify")
+
+# development utils
+  "visual-studio-code-bin"
+  "android-studio"
+  
+)
 
 for i in "${programs[@]}"
 do
