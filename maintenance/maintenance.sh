@@ -1,1 +1,3 @@
-pacman -S pacman-contrib
+pacman -S pacman-contrib --noconfirm --needed
+
+paccache -r 
