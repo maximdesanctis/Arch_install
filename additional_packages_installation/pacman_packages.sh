@@ -36,6 +36,7 @@ declare -a programs=(
   "kinfocenter"
   "keepassxc"
   "dragon"
+  "filelight"
 
 # system utils
   "tlp"
