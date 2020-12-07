@@ -3,6 +3,7 @@ curl -s "https://www.archlinux.org/mirrorlist/?country=DE&protocol=http&protocol
 pacman -Syu
 pacman -S pacman-contrib --noconfirm --needed
 paccache -r
+pacman -Sc
 pacman -Rns $(pacman -Qtdq)
 
 yay -Syu
