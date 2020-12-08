@@ -11,7 +11,6 @@ yay -Syu
 # clean cached pacman and AUR files
 sudo pacman -S pacman-contrib --noconfirm --needed
 sudo paccache -r
-sudo pacman -Sc
 sudo pacman -Rns $(pacman -Qtdq)
 yay -Yc
 
