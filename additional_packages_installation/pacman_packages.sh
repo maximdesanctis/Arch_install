@@ -18,6 +18,7 @@ declare -a programs=(
   "nmap"
   "ettercap"
   "man-db"
+  "ethtool"
 
 
 # development utils
