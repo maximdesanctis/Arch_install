@@ -67,6 +67,9 @@ timedatectl status
 nano /etc/locale.gen | sed -e "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8"
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
+
+# enable kernel level shortcuts
+sed -e "s/kernel.sysrq = 16/kernel.sysrq = 1/g" /usr/lib/sysctl.d/50-default.conf
 clear
 
 
