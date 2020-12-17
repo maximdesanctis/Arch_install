@@ -19,6 +19,7 @@ declare -a programs=(
   "ettercap"
   "man-db"
   "ethtool"
+  "htop"
 
 
 # development utils
