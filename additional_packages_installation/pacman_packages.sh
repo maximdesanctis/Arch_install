@@ -38,7 +38,7 @@ declare -a programs=(
   "gwenview"
   "kinfocenter"
   "keepassxc"
-  "dragon"
+  "vlc"
   "filelight"
 
 # system utils
