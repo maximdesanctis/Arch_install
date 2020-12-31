@@ -1,5 +1,5 @@
 # WARNING
-# This script was not tested yet in a Virtual Machine nor on a physical computer
+# This script was neither tested yet in a Virtual Machine nor on a physical computer
 
 
 echo "------------------------------------------"
