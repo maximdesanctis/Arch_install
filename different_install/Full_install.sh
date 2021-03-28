@@ -24,7 +24,7 @@ echo "------------------------------------------"
 echo "--  Downloading fresh package database  --"
 echo "------------------------------------------"
 pacman -Syy
-
+sleep 5
 
 echo "------------------------------------------"
 echo "--             Partitioning             --"
@@ -37,7 +37,9 @@ echo "------------------------------------------"
 echo "--              Preparation             --"
 echo "------------------------------------------"
 sgdisk -Z ${DISK}           # destroying existing mbr/gpt structures on disk
+sleep 5
 sgdisk -a 2048 -o ${DISK}   # creating new gpt disk 2048 alignment
+sleep 5
 
 echo "------------------------------------------"
 echo "--          Creating partitions         --"
@@ -45,6 +47,7 @@ echo "------------------------------------------"
 sgdisk -n 1:0:+512M ${DISK} # partition 1 (ESP),  default start block, 512MB
 sgdisk -n 2:0:+50G ${DISK}  # partition 2 (ROOT), default start,       50GB
 sgdisk -n 3:0:0 ${DISK}     # partition 3 (HOME), default start,       remaining space
+sleep 10
 
 echo "------------------------------------------"
 echo "--        Setting partition types       --"
@@ -65,17 +68,18 @@ echo "--          Mounting partitions         --"
 echo "------------------------------------------"
 mkdir -p /mnt/boot/efi      #creating mountpoint for first partition (boot)
 mkdir /mnt/home             #creating mountpoint for third partition (home)
+sleep 10
 mount "${DISK}p1" /mnt/boot/efi # mounting first partition 
 mount "${DISK}p2" /mnt          # mounting second partition  
 mount "${DISK}p3" /mnt/home/    # mounting third partition 
-
+sleep 10
 
 echo "------------------------------------------"
 echo "--         Installing base Arch         --"
 echo "------------------------------------------"
 pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
-
+sleep 10
 
 echo "------------------------------------------"
 echo "--    Changing root directory to /mnt   --"
