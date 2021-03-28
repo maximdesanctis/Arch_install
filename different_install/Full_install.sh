@@ -68,12 +68,11 @@ echo "--          Mounting partitions         --"
 echo "------------------------------------------"
 mkdir -p /mnt/boot/efi      #creating mountpoint for first partition (boot)
 mkdir /mnt/home             #creating mountpoint for third partition (home)
-ls /
 ls / |grep mnt
-ls /mnt/boot
 ls /mnt/boot|grep efi
-ls /mnt
 ls /mnt|grep home
+mkdir /mnt/home
+mkdir /mnt/home
 sleep 10
 mount "${DISK}1" /mnt/boot/efi # mounting first partition 
 mount "${DISK}2" /mnt          # mounting second partition  
