@@ -59,9 +59,9 @@ sgdisk -t 3:8300 ${DISK}    # Linux filesystem
 echo "------------------------------------------"
 echo "--        Setting up filesystems        --"
 echo "------------------------------------------"
-mkfs.fat -F32 "${DISK}p1"  # Fat32 on first partition 
-mkfs.ext4 "${DISK}p2"      # ext4 on second partition 
-mkfs.ext4 "${DISK}p3"      # ext4 on third partition 
+mkfs.fat -F32 "${DISK}1"  # Fat32 on first partition 
+mkfs.ext4 "${DISK}2"      # ext4 on second partition 
+mkfs.ext4 "${DISK}3"      # ext4 on third partition 
 
 echo "------------------------------------------"
 echo "--          Mounting partitions         --"
