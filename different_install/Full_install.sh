@@ -37,9 +37,7 @@ echo "------------------------------------------"
 echo "--              Preparation             --"
 echo "------------------------------------------"
 sgdisk -Z ${DISK}           # destroying existing mbr/gpt structures on disk
-sleep 5
 sgdisk -a 2048 -o ${DISK}   # creating new gpt disk 2048 alignment
-sleep 5
 
 echo "------------------------------------------"
 echo "--          Creating partitions         --"
@@ -47,7 +45,6 @@ echo "------------------------------------------"
 sgdisk -n 1:0:+512M ${DISK} # partition 1 (ESP),  default start block, 512MB
 sgdisk -n 2:0:+50G ${DISK}  # partition 2 (ROOT), default start,       50GB
 sgdisk -n 3:0:0 ${DISK}     # partition 3 (HOME), default start,       remaining space
-sleep 10
 
 echo "------------------------------------------"
 echo "--        Setting partition types       --"
@@ -74,9 +71,9 @@ ls /mnt|grep home
 mkdir /mnt/home
 mkdir /mnt/home
 sleep 10
-mount "${DISK}1" /mnt/boot/efi # mounting first partition 
-mount "${DISK}2" /mnt          # mounting second partition  
-mount "${DISK}3" /mnt/home    # mounting third partition 
+mount "${DISK}1" /mnt/boot/efi # mounting first partition
+mount "${DISK}2" /mnt          # mounting second partition
+mount "${DISK}3" /mnt/home    # mounting third partition                            ERROR:'Mountpoint does not exist' 
 sleep 10
 
 echo "------------------------------------------"
@@ -105,7 +102,7 @@ pacman -S grub efibootmgr amd-ucode --noconfirm  # that may not be appropriate, 
 lsblk
 echo "Please enter disk to install grub on: (probably /dev/sda)"
 read DISK
-grub-install "${DISK}"
+grub-install "${DISK}"                                                                #ERROR:'grub-install: error: cannot find EFI directory.'
 grub-mkconfig -o /boot/grub/grub.cfg
 
 
