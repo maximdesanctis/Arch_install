@@ -1,6 +1,5 @@
 # WARNING
 # This script was neither tested yet in a Virtual Machine nor on a physical computer
-#!/bin/bash
 
 echo "------------------------------------------"
 echo "--          Installing ArchLinux        --"
