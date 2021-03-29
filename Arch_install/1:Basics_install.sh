@@ -61,13 +61,14 @@ mkfs.ext4 "${DISK}3"      # ext4 on third partition
 echo "------------------------------------------"
 echo "--          Mounting partitions         --"
 echo "------------------------------------------"
+sleep 2
 mkdir -p /mnt/boot/efi         # creating mountpoint for first partition (boot)
 mkdir /mnt/home               # creating mountpoint for third partition (home)
-sleep 2
+ls /mnt/boot|grep efi
+ls /mnt|grep home
 mount "${DISK}2" /mnt         # mounting second partition
 mount "${DISK}1" /mnt/boot/efi # mounting first partition
 mount "${DISK}3" /mnt/home    # mounting third partition                             
-sleep 10
 
 echo "------------------------------------------"
 echo "--         Installing base Arch         --"
