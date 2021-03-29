@@ -61,8 +61,9 @@ mkfs.ext4 "${DISK}3"      # ext4 on third partition
 echo "------------------------------------------"
 echo "--          Mounting partitions         --"
 echo "------------------------------------------"
-mkdir -p /mnt/boot/efi         #creating mountpoint for first partition (boot)
-mkdir /mnt/home               #creating mountpoint for third partition (home)
+mkdir -p /mnt/boot/efi         # creating mountpoint for first partition (boot)
+mkdir /mnt/home               # creating mountpoint for third partition (home)
+sleep 2
 mount "${DISK}2" /mnt         # mounting second partition
 mount "${DISK}1" /mnt/boot/efi # mounting first partition
 mount "${DISK}3" /mnt/home    # mounting third partition                             
