@@ -76,14 +76,12 @@ ls /mnt|grep home
 mount "${DISK}2" /mnt         # mounting second partition
 mount "${DISK}1" /mnt/boot/efi # mounting first partition
 mount "${DISK}3" /mnt/home    # mounting third partition
-sleep 5
 
 echo "------------------------------------------"
 echo "--         Installing base Arch         --"
 echo "------------------------------------------"
 pacstrap /mnt base base-devel linux linux-headers linux-lts linux-lts-headers linux-firmware git --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
-sleep 10
 
 echo "------------------------------------------"
 echo "--    Changing root directory to /mnt   --"
