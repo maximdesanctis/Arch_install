@@ -54,22 +54,7 @@ echo '::1   localhost' >> /etc/hosts
 timedatectl set-timezone Europe/Berlin      # setting timezone 
 timedatectl set-ntp true                    # enabling NTP
 timedatectl status                          # displaying status of the time
-nano /etc/locale.gen | sed -e "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g"  # setting up language to English 
+sed -e "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g" /etc/locale.gen  # setting up language to English 
 echo LANG=en_US.UTF-8 > /etc/locale.conf    
 locale-gen
 sed -e "s/kernel.sysrq = 16/kernel.sysrq = 1/g" /usr/lib/sysctl.d/50-default.conf  # enabling all kernel level shortcuts
-
-
-echo "------------------------------------------"
-echo "--         Preparing first reboot       --"
-echo "------------------------------------------"
-exit
-umount "${DISK}p1"
-umount "${DISK}p2"
-umount "${DISK}p3"
-
-
-echo "------------------------------------------"
-echo "--               Rebooting              --"
-echo "------------------------------------------"
-reboot
