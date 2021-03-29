@@ -23,7 +23,6 @@ echo "------------------------------------------"
 echo "--  Downloading fresh package database  --"
 echo "------------------------------------------"
 pacman -Syy
-sleep 5
 
 echo "------------------------------------------"
 echo "--             Partitioning             --"
