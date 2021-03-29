@@ -71,9 +71,9 @@ ls /mnt|grep home
 mkdir /mnt/home
 mkdir /mnt/home
 sleep 10
-mount "${DISK}1" /mnt/boot/efi # mounting first partition
 mount "${DISK}2" /mnt          # mounting second partition
-mount "${DISK}3" /mnt/home    # mounting third partition                            ERROR:'Mountpoint does not exist' 
+mount "${DISK}1" /mnt/boot/efi # mounting first partition
+mount "${DISK}3" /mnt/home    # mounting third partition                             
 sleep 10
 
 echo "------------------------------------------"
