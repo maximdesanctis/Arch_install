@@ -5,7 +5,8 @@
 echo "------------------------------------------"
 echo "--         Preparing first reboot        --"
 echo "------------------------------------------"
-exit
+sudo exit
+
 umount "${DISK}p1"
 umount "${DISK}p2"
 umount "${DISK}p3"
@@ -14,7 +15,7 @@ umount "${DISK}p3"
 echo "------------------------------------------"
 echo "--               Rebooting              --"
 echo "------------------------------------------"
-reboot
+sudo reboot
 
 
 echo "------------------------------------------"
