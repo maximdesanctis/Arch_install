@@ -77,5 +77,5 @@ echo "------------------------------------------"
 echo "--    Changing root directory to /mnt   --"
 echo "------------------------------------------"
 echo ""
-echo "Now enter: curl -O https://raw.githubusercontent.com/maxobaerchen/Arch_install/master/Arch_install/Setup%20(Step%202).sh"
+echo "Now enter: curl -O https://raw.githubusercontent.com/maxobaerchen/Arch_install/master/Arch_install/2%3ASetup.sh"
 arch-chroot /mnt
