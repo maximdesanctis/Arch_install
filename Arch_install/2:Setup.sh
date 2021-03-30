@@ -59,4 +59,8 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
 sed -e "s/kernel.sysrq = 16/kernel.sysrq = 1/g" /usr/lib/sysctl.d/50-default.conf  # enabling all kernel level shortcuts
 
+echo "------------------------------------------"
+echo "--         Preparing first reboot        --"
+echo "------------------------------------------"
 echo "Now enter: curl -o Step3 https://raw.githubusercontent.com/maxobaerchen/Arch_install/master/Arch_install/3%3AEssentials_install.sh"
+exit 0
