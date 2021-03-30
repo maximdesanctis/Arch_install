@@ -1,5 +1,6 @@
 # WARNING
 # This script was neither tested yet in a Virtual Machine nor on a physical computer
+# Error in line 58
 
 echo "------------------------------------------"
 echo "--        Setting up root password      --"
@@ -63,5 +64,5 @@ sed -e "s/kernel.sysrq = 16/kernel.sysrq = 1/g" /usr/lib/sysctl.d/50-default.con
 echo "------------------------------------------"
 echo "--         Preparing first reboot        --"
 echo "------------------------------------------"
-echo "Now enter: curl -o Step3 https://raw.githubusercontent.com/maxobaerchen/Arch_install/master/Arch_install/3%3AEssentials_install.sh"
-exit 0
+echo "Now enter: exit"
+echo "And: curl -o Step3 https://raw.githubusercontent.com/maxobaerchen/Arch_install/master/Arch_install/3%3AEssentials_install.sh"
