@@ -41,4 +41,6 @@ systemctl enable cups
 cp /etc/cups/cupsd.conf /etc/cups/cupsd.conf.bak
 gpg --full-gen-key
 
+echo "Everything is set up now!"
+
 reboot
