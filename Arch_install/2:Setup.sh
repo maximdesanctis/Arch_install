@@ -14,7 +14,7 @@ pacman -S grub efibootmgr amd-ucode --noconfirm  # that may not be appropriate, 
 lsblk
 echo "Please enter disk to install grub on: (probably /dev/sda)"
 read DISK
-grub-install "${DISK}"                                                                #ERROR:'grub-install: error: cannot find EFI directory.'
+grub-install "${DISK}"                                                                
 grub-mkconfig -o /boot/grub/grub.cfg
 
 
@@ -58,6 +58,7 @@ sed -e "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g" /etc/locale.gen  # setting up 
 echo LANG=en_US.UTF-8 > /etc/locale.conf    
 locale-gen
 sed -e "s/kernel.sysrq = 16/kernel.sysrq = 1/g" /usr/lib/sysctl.d/50-default.conf  # enabling all kernel level shortcuts
+
 
 echo "------------------------------------------"
 echo "--         Preparing first reboot        --"
