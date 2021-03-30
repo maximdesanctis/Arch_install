@@ -22,7 +22,7 @@ passwd $USER
 sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g" /etc/sudoers  # giving root privileges to the group wheel
 pacman -S xdg-user-dirs xorg-server xorg-xrandr mesa amd amd-utils amd-settings amd-lts amd-prime sddm sddm-kcm pulseaudio --noconfirm --needed
 pacman -S pulseaudio-alsa bluez bluez-utils pulseaudio-bluetooth plasma-desktop konsole dolphin firefox latte-dock plasma-nm --noconfirm --needed
-pacman -S bluedevil plasma-pa powerdevil plasma-thunderbolt hplip cups print-manager
+pacman -S bluedevil plasma-pa powerdevil plasma-thunderbolt hplip cups print-manager --noconfirm --needed
 xdg-user-dirs-update
 systemctl enable sddm
 systemctl enable bluetooth
