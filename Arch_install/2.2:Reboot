@@ -1,0 +1,9 @@
+umount "${DISK}p1"
+umount "${DISK}p2"
+umount "${DISK}p3"
+
+
+echo "------------------------------------------"
+echo "--               Rebooting              --"
+echo "------------------------------------------"
+reboot
