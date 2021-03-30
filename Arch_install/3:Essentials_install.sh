@@ -1,5 +1,6 @@
 # WARNING
 # This script was neither tested yet in a Virtual Machine nor on a physical computer
+# Error: Some packages are not installed
 
 echo "------------------------------------------"
 echo "--         Installing Essentials        --"
