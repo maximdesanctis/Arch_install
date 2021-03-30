@@ -1,17 +1,6 @@
 # WARNING
 # This script was neither tested yet in a Virtual Machine nor on a physical computer
 
-umount "${DISK}p1"
-umount "${DISK}p2"
-umount "${DISK}p3"
-
-
-echo "------------------------------------------"
-echo "--               Rebooting              --"
-echo "------------------------------------------"
-reboot
-
-
 echo "------------------------------------------"
 echo "--         Installing Essentials        --"
 echo "------------------------------------------"
