@@ -1,5 +1,5 @@
 # WARNING
-# This script was neither tested yet in a virtual machine nor on a physical computer
+# This script hasn't been tested yet
 # Error: Some packages are not installed
 
 echo "------------------------------------------"
